@@ -6,3 +6,24 @@
 * {
     font-family: "Titillium Web", sans-serif;
 }
+
+/* custom font sizes  */
+.small-heading1 {
+    font-size: 30px;
+}
+
+.small-heading2 {
+    font-size: 36px;
+}
+
+.big-heading1 {
+    font-size: 32px;
+}
+
+.big-heading2 {
+    font-size: 38px;
+}
+
+.normal-size {
+    font-size: 18px;
+}

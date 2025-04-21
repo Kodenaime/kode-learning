@@ -9,7 +9,7 @@ const Navbar = () => {
   const isCourseListPage = location.pathname.includes('/course-list');
 
   const {openSignIn} = useClerk()
-  const {user} = useUser
+  const {user} = useUser()
 
   return (
     <div className={`flex items-center justify-between px-4 sm:px-10 md:px-14 lg:px-36 border-b border-gray-500 py-4 ${isCourseListPage ? 'bg-white' : 'bg-cyan-100/70'}`} >
@@ -25,16 +25,23 @@ const Navbar = () => {
           }
         </div>
         {
-          user ? <UserButton /> : <button onClick={() => openSignIn()} className='bg-blue-600 text-white px-5 py-2 rounded-lg cursor-pointer'>Join Us</button>
+          user ? <UserButton /> : <button onClick={() => openSignIn()} className='bg-orange-600 text-white px-5 py-2 rounded-lg cursor-pointer'>Join Us</button>
         }
       </div>
       {/* second navbar for smaller screens structure */}
       <div className='md:hidden flex items-center gap-2 sm:gap-5 text-gray-500 '>
-        <div>
-          <button>Educator</button>
-          |  <Link to='/enrollments'>Enrollments</Link>
+        <div className='flex items-center gap-1 sm:gap-2 max-sm:text-xs'>
+          {
+            user  && 
+            <>
+              <button>Educator</button>
+              |  <Link to='/enrollments'>Enrollments</Link>
+            </>
+          }
         </div>
-        <button><img src={assets.user_icon} alt="" /></button>
+        {
+          user ? <UserButton /> : <button onClick={() => openSignIn()}><img src={assets.user_icon} alt="" /></button>
+        }
       </div>
 
     </div>

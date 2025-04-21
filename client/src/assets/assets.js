@@ -6,10 +6,10 @@ import cross_icon from './cross_icon.svg'
 import upload_area from './upload_area.svg'
 import sketch from './sktech.svg'
 import microsoft_logo from './microsoft_logo.svg'
-import walmart_logo from './walmart_logo.svg'
-import accenture_logo from './accenture_logo.svg'
+import google_logo from './google_logo.webp'
+import cambridge_logo from './cambridge_logo.webp'
+import stanford_logo from './stanford_logo.webp'
 import adobe_logo from './adobe_logo.svg'
-import paypal_logo from './paypal_logo.svg'
 import course_1_thumbnail from './course_1.png'
 import course_2_thumbnail from './course_2.png'
 import course_3_thumbnail from './course_3.png'
@@ -51,10 +51,10 @@ export const assets = {
     search_icon,
     sketch,
     microsoft_logo,
-    walmart_logo,
-    accenture_logo,
+    google_logo,
+    cambridge_logo,
     adobe_logo,
-    paypal_logo,
+    stanford_logo,
     course_1_thumbnail,
     course_2_thumbnail,
     course_3_thumbnail,
@@ -213,7 +213,7 @@ export const dummyStudentEnrolled = [
     }
 ]
 
-export const dummyCourses = [
+export const coursesData = [
     {
         "_id": "605c72efb3f1c2b1f8e4e1a1",
         "courseTitle": "Introduction to JavaScript",
