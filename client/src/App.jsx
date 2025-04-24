@@ -47,3 +47,5 @@ const App = () => {
 }
 
 export default App
+
+// https://youtube.com/shorts/lGmpSq-kckA?si=QigAtbMgOVBEQ1sa
