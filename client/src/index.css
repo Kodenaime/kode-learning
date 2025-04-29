@@ -27,3 +27,9 @@
 .normal-size {
     font-size: 18px;
 }
+
+
+/* .grid-templates {
+    display: grid;
+    grid-template-columns: repeat(autofit, minmax(200px, 1fr));
+} */

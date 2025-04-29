@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import { assets } from '../../assets/assets'
 import { Link } from 'react-router-dom'
 import { useClerk, UserButton, useUser } from '@clerk/clerk-react'
+import { AppContext } from '../../context/AppContext'
 
 const Navbar = () => {
+
+  const {isEducator, navigate} = useContext(AppContext)
 
   const isCourseListPage = location.pathname.includes('/course-list');
 
@@ -19,7 +22,7 @@ const Navbar = () => {
           {
             user  && 
             <>
-              <button>Educator</button>
+              <button onClick={() => {navigate('/educator')}} >{ isEducator ? 'Dashboard' : 'Educator' }</button>
               |  <Link to='/enrollments'>Enrollments</Link>
             </>
           }
@@ -34,7 +37,7 @@ const Navbar = () => {
           {
             user  && 
             <>
-              <button>Educator</button>
+              <button onClick={() => {navigate('/educator')}} >{ isEducator ? 'Dashboard' : 'Educator' }</button>
               |  <Link to='/enrollments'>Enrollments</Link>
             </>
           }
