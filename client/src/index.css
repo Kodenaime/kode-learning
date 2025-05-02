@@ -28,8 +28,50 @@
     font-size: 18px;
 }
 
+.first-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 2rem 1rem;
+}
+
+
+.second-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2rem 10rem;
+}
+
 
 /* .grid-templates {
     display: grid;
     grid-template-columns: repeat(autofit, minmax(200px, 1fr));
 } */
+@media screen and (max-width: 990px) {
+
+    .first-grid {
+        grid-template-columns: repeat(2, 1fr);       
+    }
+
+    .second-grid {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 2rem;       
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 760px) {
+
+    .first-grid {
+        grid-template-columns: 1fr;       
+    }
+
+    .second-grid {
+        grid-template-columns: 1fr;
+        margin: 2rem;
+    }
+}

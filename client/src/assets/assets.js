@@ -105,25 +105,25 @@ export const dummyEducatorData = {
 
 export const dummyTestimonial = [
     {
-        name: 'Donald Jackman',
-        role: 'SWE 1 @ Amazon',
+        name: 'Funyin Kash',
+        role: 'Mobile Developer',
         image: assets.profile_img_1,
         rating: 5,
-        feedback: 'I\'ve been using Imagify for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.',
+        feedback: 'I\'ve been using kode-learning for nearly two years, and it has been incredibly user-friendly, making learning much easier and enjoyable.',
     },
     {
-        name: 'Richard Nelson',
-        role: 'SWE 2 @ Samsung',
+        name: 'Daniel Ekechukwu',
+        role: 'Front-end Developer',
         image: assets.profile_img_2,
         rating: 4,
-        feedback: 'I\'ve been using Imagify for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.',
+        feedback: 'I\'ve been using kode-learning for nearly two years, and it has been incredibly user-friendly, making learning much easier and enjoyable.',
     },
     {
-        name: 'James Washington',
-        role: 'SWE 2 @ Google',
+        name: 'Senju Hashirama',
+        role: 'First Hokage',
         image: assets.profile_img_3,
         rating: 4.5,
-        feedback: 'I\'ve been using Imagify for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.',
+        feedback: 'I\'ve been using kode-learning for nearly two years, and it has been incredibly user-friendly, making learning much easier and enjoyable.',
     },
 ];
 
