@@ -5,14 +5,31 @@ const Footer = () => {
   return (
     <footer className='bg-gray-900 md:px-36 text-left w-full mt-10' >
       <div className='flex flex-col md:flex-row items-start px-8 md:px-0 justify-center gap-10 md:gap-32 py-10 border-b border-white/30' >
-        <div>
+        <div className='flex flex-col md:items-start items-center w-full'>
           <img src={assets.logos} alt="logo" />
-          <p>Join the more than 2,000 creators and students who use Kode-learning to share and increase their knowledge. Easily create and enroll courses your favorite courses with our powerful yet simple tools.</p>
+          <p className='mt-6 text-center md:text-left text-sm text-white/80'>Join the more than 2,000 creators and students who use Kode-learning to share and increase their knowledge. Easily create and enroll courses your favorite courses with our powerful yet simple tools.</p>
         </div>
-        <div></div>
-        <div></div>
+        <div className='flex flex-col md:items-start items-center w-full'>
+          <h2 className='font-semibold text-white mb-5'>Company</h2>
+          <ul className='flex flex-col w-full justify-between text-sm text-white/80 md:space-y-2'>
+            <li><a className='hover:text-orange-600' href="#">Home</a></li>
+            <li><a className='hover:text-orange-600' href="#">About Us</a></li>
+            <li><a className='hover:text-orange-600' href="#">Contact Us</a></li>
+            <li><a className='hover:text-orange-600' href="#">Terms of Use</a></li>
+            <li><a className='hover:text-orange-600' href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div className='hidden md:flex flex-col items-start w-full'>
+            <h2 className='font-semibold text-white mb-5'>Subscribe to our Newsletter</h2>
+            <p className='text-sm text-white/80'>Take a leap today, subcribe to our newsletter and get the latest updates.</p>
+            <div className='flex items-center gap-2 pt-4'>
+              <input type="email" placeholder='Enter your email' 
+               className='border border-gray-500/30 bg-gray-800 text-gray-500 placeholder-gray-500 outline-none w-64 h-9 rounded px-2 text-sm' />
+              <button className='bg-orange-600 w-24 h-9 text-white rounded'>Subscribe</button>
+            </div>
+        </div>
       </div>
-      <p>Copy 2025 &copy; Kode-Learning. All Rights Reserved</p>
+      <p className='py-4 text-center text-xs md:text-sm text-white/60'>Copy 2025 &copy; Kode-Learning. All Rights Reserved</p>
     </footer>
   )
 }

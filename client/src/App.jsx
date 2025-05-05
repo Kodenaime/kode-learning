@@ -14,6 +14,7 @@ import AddCourse from './pages/educator/AddCourse'
 import Courses from './pages/educator/Courses'
 import Students from './pages/educator/Students'
 import Navbar from './components/student/Navbar'
+import Footer from './components/student/Footer'
 
 const App = () => { 
 
@@ -42,6 +43,7 @@ const App = () => {
         </Route>
 
       </Routes>
+      <Footer />
     </div>
   )
 }
