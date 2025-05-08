@@ -1,19 +1,21 @@
 import { createContext, useEffect, useState } from "react";
 import { coursesData } from "../assets/assets";
 import { useNavigate } from "react-router-dom";
+import humanizeDuration from "humanize-duration";
 
-export const AppContext = createContext()
+export const AppContext = createContext();
 
 export const AppContextProvider = (props) => {
 
-    const currency = import.meta.env.VITE_CURRENCY
-    const navigate = useNavigate()
+    const currency = import.meta.env.VITE_CURRENCY;
+    const navigate = useNavigate();
 
-    const [allCourses, setAllCoursese] = useState([])
+    const [allCourses, setAllCourses] = useState([])
     const [isEducator, setIsEducator] = useState(true) 
+    
     // function for fetching all courses
     const fetchAllCourses = async () => {
-        setAllCoursese(coursesData)
+        setAllCourses(coursesData)
     }
 
     // calculation for average rating of courses
@@ -28,6 +30,32 @@ export const AppContextProvider = (props) => {
         return totalRating / course.courseRatings.length
     }
 
+    // function for calculating total time needed for the chapter
+    const calculateTiming = (chapter) => {
+        let time = 0
+        chapter.chapterContent.map((lecture) => time += lecture.lectureDuration)
+        return humanizeDuration(time * 60 *100, {units: ["h", "m"]})
+    }
+
+    // function for calculating total time needed for the course
+    const calculateTime = (course) => {
+        let time = 0
+        course.courseContent.map((chapter) => time += chapter.chapterDuration.map((lecture) => time += lecture.lectureDuration))
+
+        return humanizeDuration(time * 60 *100, {units: ["h", "m"]})
+    }
+
+     // function for calculating total number of lectures in the course
+     const calculateLectures = (course) => {
+        let totalLectures = 0;
+        course.courseContent.forEach(chapter => {
+            if(Array.isArray(chapter.chapterContent)) {
+                totalLectures += chapter.chapterContent.length;
+            }
+        });
+        return totalLectures;
+     }
+
     useEffect(() => {
         fetchAllCourses()
     },[])
@@ -38,6 +66,9 @@ export const AppContextProvider = (props) => {
         calculateRating,
         navigate,
         isEducator, setIsEducator,
+        calculateTiming,
+        calculateTime,
+        calculateLectures
     }
 
     return (

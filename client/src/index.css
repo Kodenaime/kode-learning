@@ -18,6 +18,8 @@
 
 .big-heading1 {
     font-size: 32px;
+    color:  oklch(27.8% 0.033 256.848);
+    font-weight: 500;
 }
 
 .big-heading2 {
