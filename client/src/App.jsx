@@ -3,7 +3,7 @@ import { Route, Routes, useMatch } from 'react-router-dom'
 
 import Home from './pages/student/Home'
 import CourseList from './pages/student/CourseList'
-import CourseDetails from './pages/student/CourseDetails'
+import CourseDetails from './pages/student/Coursedetails'
 import Enrollments from './pages/student/Enrollments'
 import Player from './pages/student/Player'
 import Loading from './components/student/Loading'
