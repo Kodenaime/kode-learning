@@ -1,12 +1,14 @@
 import React from 'react'
 import { assets } from '../../assets/assets'
+import logo1 from '../../assets/logo1.png'
+import logo from '../../assets/logo.png'
 
 const Footer = () => {
   return (
     <footer className='bg-gray-900 md:px-36 text-left w-full mt-10' >
       <div className='flex flex-col md:flex-row items-start px-8 md:px-0 justify-center gap-10 md:gap-32 py-10 border-b border-white/30' >
         <div className='flex flex-col md:items-start items-center w-full'>
-          <img src={assets.logos} alt="logo" />
+          <img src={logo} alt="logo" />
           <p className='mt-6 text-center md:text-left text-sm text-white/80'>Join the more than 2,000 creators and students who use Kode-learning to share and increase their knowledge. Easily create and enroll courses your favorite courses with our powerful yet simple tools.</p>
         </div>
         <div className='flex flex-col md:items-start items-center w-full'>
